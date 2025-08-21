@@ -1,15 +1,19 @@
 ### Question 1
+
 Level 1
 
 Question:
 Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included).
 The numbers obtained should be printed in a comma-separated sequence on a single line.
 
-Hints: 
+Hints:  
+
 Consider use range(#begin, #end) method
 
 Solution:
+
 ```python
+
 l=[]
 for i in range(2000, 3201):
     if (i%7==0) and (i%5!=0):
@@ -19,6 +23,7 @@ print(','.join(l))
 ```
 
 ### Question 2
+
 Level 1
 
 Question:
@@ -33,6 +38,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+
 ```python
 def fact(x):
     if x == 0:
@@ -44,6 +50,7 @@ print(fact(x))
 ```
 
 ### Question 3
+
 Level 1
 
 Question:
@@ -58,6 +65,7 @@ In case of input data being supplied to the question, it should be assumed to be
 Consider use dict()
 
 Solution:
+
 ```python
 n=int(input())
 d=dict()
@@ -68,6 +76,7 @@ print(d)
 ```
 
 ### Question 4
+
 Level 1
 
 Question:
@@ -83,6 +92,7 @@ In case of input data being supplied to the question, it should be assumed to be
 tuple() method can convert list to tuple
 
 Solution:
+
 ```python
 values=input()
 l=values.split(",")
@@ -92,6 +102,7 @@ print(t)
 ```
 
 ### Question 5
+
 Level 1
 
 Question:
@@ -104,6 +115,7 @@ Hints:
 Use __init__ method to construct some parameters
 
 Solution:
+
 ```python
 class InputOutString(object):
     def __init__(self):
@@ -121,6 +133,7 @@ strObj.printString()
 ```
 
 ### Question 6
+
 Level 2
 
 Question:
@@ -140,6 +153,7 @@ If the output received is in decimal form, it should be rounded off to its neare
 In case of input data being supplied to the question, it should be assumed to be a console input. 
 
 Solution:
+
 ```python
 import math
 c=50
@@ -153,6 +167,7 @@ print(','.join(value))
 ```
 
 ### Question 7
+
 Level 2
 
 Question:
@@ -168,6 +183,7 @@ Hints:
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 
 Solution:
+
 ```python
 input_str = input()
 dimensions=[int(x) for x in input_str.split(',')]
@@ -183,6 +199,7 @@ print(multilist)
 ```
 
 ### Question 8
+
 Level 2
 
 Question:
@@ -196,6 +213,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+
 ```python
 items=[x for x in input().split(',')]
 items.sort()
@@ -203,6 +221,7 @@ print(','.join(items))
 ```
 
 ### Question 9
+
 Level 2
 
 Question£º
@@ -218,6 +237,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+
 ```python
 lines = []
 while True:
@@ -232,6 +252,7 @@ for sentence in lines:
 ```
 
 ### Question 10
+
 Level 2
 
 Question:
@@ -246,6 +267,7 @@ In case of input data being supplied to the question, it should be assumed to be
 We use set container to remove duplicated data automatically and then use sorted() to sort the data.
 
 Solution:
+
 ```python
 s = input()
 words = [word for word in s.split(" ")]
@@ -253,6 +275,7 @@ print(" ".join(sorted(list(set(words)))))
 ```
 
 ### Question 11
+
 Level 2
 
 Question:
@@ -267,6 +290,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+
 ```python
 value = []
 items=[x for x in input().split(',')]
@@ -279,6 +303,7 @@ print(','.join(value))
 ```
 
 ### Question 12
+
 Level 2
 
 Question:
@@ -289,7 +314,9 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+
 ```python
+
 values = []
 for i in range(1000, 3001):
     s = str(i)
@@ -299,6 +326,7 @@ print(",".join(values))
 ```
 
 ### Question 13
+
 Level 2
 
 Question:
@@ -313,6 +341,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+
 ```python
 s = input()
 d={"DIGITS":0, "LETTERS":0}
@@ -328,6 +357,7 @@ print("DIGITS", d["DIGITS"])
 ```
 
 ### Question 14
+
 Level 2
 
 Question:
@@ -342,6 +372,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
+
 ```python
 s = input()
 d={"UPPER CASE":0, "LOWER CASE":0}
@@ -357,6 +388,7 @@ print("LOWER CASE", d["LOWER CASE"])
 ```
 
 ### Question 15
+
 Level 2
 
 Question:
@@ -381,6 +413,7 @@ print(n1+n2+n3+n4)
 ```
 
 ### Question 16
+
 Level 2
 
 Question:
@@ -402,6 +435,7 @@ print(",".join(numbers))
 ```
 
 ### Question 17
+
 Level 2
 
 Question:
@@ -442,11 +476,13 @@ print(netAmount)
 ```
 
 ### Question 18
+
 Level 3
 
 Question:
 A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
 Following are the criteria for checking the password:
+
 1. At least 1 letter between [a-z]
 2. At least 1 number between [0-9]
 1. At least 1 letter between [A-Z]
@@ -491,6 +527,7 @@ print(",".join(value))
 ```
 
 ### Question 19
+
 Level 3
 
 Question:
