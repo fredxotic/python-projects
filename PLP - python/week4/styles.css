@@ -1,0 +1,192 @@
+:root {
+    --primary-dark-color: #1a1a2e; /* Very dark blue-purple */
+    --secondary-dark-color: #2e3a59; /* Darker blue */
+    --accent-color: #00b0ff; /* Bright sky blue for highlights */
+    --text-light-color: #e6e6e6;
+    --text-muted-color: #b0b0b0;
+}
+
+/* Basic Setup and Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-dark-color);
+    color: var(--text-light-color);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==== CSS Grid for Main Page Layout ==== */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'nav nav'
+        'main sidebar'
+        'footer footer';
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+header, nav, main, aside, footer {
+    padding: 2.5rem;
+    border-radius: 12px;
+    background-color: var(--secondary-dark-color);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    color: var(--text-muted-color);
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: var(--primary-dark-color); /* Matches the body for a seamless look */
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #121221; /* Even darker footer */
+    color: var(--text-muted-color);
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+        
+/* ==== Flexbox for Navigation and Lists ==== */
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: var(--text-light-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-list li a:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+        
+main h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-light-color);
+}
+
+main p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-muted-color);
+}
+        
+aside h3 {
+    color: var(--accent-color);
+}
+
+aside ul {
+    list-style: none;
+}
+        
+aside li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+        
+aside a {
+    color: var(--text-muted-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+        
+aside a:hover {
+    color: var(--accent-color);
+}
+
+/* ==== Responsive Media Queries ==== */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'nav'
+            'main'
+            'sidebar'
+            'footer';
+        grid-template-columns: 1fr;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list li a {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+        background-color: var(--primary-dark-color);
+        border-radius: 8px;
+    }
+
+    header, nav, main, aside, footer {
+        padding: 1.5rem;
+    }
+}
